@@ -4,9 +4,6 @@ all: install
 ${HOME}/.gitconfig: gitconfig
 	ln -s ${PWD}/$< $@
 
-${HOME}/.gitignore: gitignore
-	ln -s ${PWD}/$< $@
-
 ${HOME}/.hgrc: hgrc
 	ln -s ${PWD}/$< $@
 
@@ -27,7 +24,6 @@ ${HOME}/.vim: vim
 
 .PHONY: install
 install: ${HOME}/.gitconfig	\
-	${HOME}/.gitignore	\
 	${HOME}/.hgrc		\
 	${HOME}/.kshrc		\
 	${HOME}/.profile	\
