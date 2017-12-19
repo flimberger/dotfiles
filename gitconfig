@@ -1,0 +1,19 @@
+[user]
+	name=Florian Limberger
+	email=florian.limberger@inovex.de
+[core]
+	editor=vim
+[push]
+	default = simple
+[color]
+	ui = auto
+[gui]
+	fontui = -family \"DejaVu Sans\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Source Code Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[alias]
+	co = checkout
+	ci = commit
+	a = add
+	st = status
+	rs = reset HEAD --
+	rsa = reset --hard HEAD
