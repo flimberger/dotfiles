@@ -1,8 +1,8 @@
 [user]
-	name=Florian Limberger
-	email=florian.limberger@inovex.de
+	name = Florian Limberger
+	email = flo@snakeoilproductions.net
 [core]
-	editor=vim
+	editor = vim
 [push]
 	default = simple
 [color]

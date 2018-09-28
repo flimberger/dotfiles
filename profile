@@ -1,14 +1,63 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
+# $FreeBSD: head/share/skel/dot.profile 320672 2017-07-05 13:08:07Z trasz $
+#
+# .profile - Bourne Shell startup script for login shells
+#
+# see also sh(1), environ(7).
+#
 
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
+# These are normally set through /etc/login.conf.  You may override them here
+# if wanted.
+# PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin; export PATH
+# BLOCKSIZE=K;	export BLOCKSIZE
 
-# if running bash
+EDITOR=vim;   	export EDITOR
+PAGER=less;  	export PAGER
+
+# Read the profile files from $HOME/lib/profile.d
+# most of them manipulate the environment, especially $PATH
+if [ -d "$HOME/lib/pofile.d" ]
+then
+	for f in "$HOME/lib/profile.d"/*
+	do
+		. "$f"
+	done
+fi
+
+# Set up local $PATH
+if [ -d "$HOME/.local/bin" ]
+then
+	PATH="$HOME/.local/bin:$PATH"
+fi
+arch=`uname -m`
+# Linux reports x86_64, FreeBSD reports amd64, use the latter
+if [ "$arch" = x86_64 ]
+then
+	arch=amd64
+fi
+if [ -d "$HOME/bin" ]
+then
+	for b in py sh "$arch"
+	do
+		if [ -d "$HOME/bin/$b" ]
+		then
+			PATH="$HOME/bin/$b:$PATH"
+		fi
+	done
+fi
+# Modifications are done, so now the variables can be exported
+export PATH
+
+# set ENV to a file invoked each time sh is started for interactive use.
+if [ -n "$KSH_VERSION" ]
+then
+	ENV="$HOME/.kshrc"
+else
+	ENV="$HOME/.shrc"
+fi
+export ENV
+
+# if running bash (improbable, but possible)
+# also, compatibility with Debian/Ubuntu
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
@@ -16,35 +65,11 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# ksh setup
-ENV="${HOME}/.kshrc"
-export ENV
+# Query terminal size; useful for serial lines.
+if [ -x /usr/bin/resizewin ] ; then /usr/bin/resizewin -z ; fi
 
-if [ -d "${HOME}/lib/profile.d" ]
-then
-	for l in "${HOME}/lib/profile.d/"*.sh
-	do
-		if [ -x "${l}" ]
-		then
-			. "${l}"
-		fi
-	done
-fi
+# Display a random cookie on each login.
+if [ -x /usr/bin/fortune ] ; then /usr/bin/fortune freebsd-tips ; fi
 
-# set up path
-
-if [ -d "${HOME}/.local/bin" ]
-then
-	PATH="${HOME}/.local/bin:${PATH}"
-fi
-# set PATH so it includes user's private bin if it exists
-for a in py sh x86 amd64
-do
-	if [ -d "${HOME}/bin/${a}" ]
-	then
-		PATH="${HOME}/bin/${a}:${PATH}"
-	fi
-done
-export PATH
-
+# for now, no display manager is used, so this works just fine
 eval $(ssh-agent)

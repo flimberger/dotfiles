@@ -1,3 +1,9 @@
 [ui]
-username=Florian Limberger <florian.limberger@inovex.de>
-editor=vim
+username = Florian Limberger <flo@snakeoilproductions.net>
+merge = internal:merge
+
+[web]
+cacerts = /usr/local/share/certs/ca-root-nss.crt
+
+[extensions]
+graphlog =
