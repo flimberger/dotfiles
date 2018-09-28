@@ -1,0 +1,16 @@
+! xft
+Xft.autohint:	0
+Xft.lcdfilter:	lcddefault
+Xft.hintstyle:	hintslight
+Xft.hinting:	1
+Xft.antialias:	1
+Xft.rgba:	rgb
+! urxvt
+URxvt.font:	xft:Source Code Pro:pixelsize=15:antialias=true:autohint=true
+URxvt.letterSpace:	-1
+URxvt.background:	#303030
+URxvt.foreground:	#d7d7d7
+URxvt.cursorColor:	#ffaf00
+URxvt.scrollBar:	no
+! xscreensaver
+xscreensaver.font:	xft:Source Code Pro:pixelsize=15:antialias=true:autohint=true

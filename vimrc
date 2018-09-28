@@ -30,7 +30,7 @@ filetype plugin indent on
 
 " colors
 colorscheme lucius
-LuciusBlack
+LuciusDark
 
 " force .h files to be interpreted as C
 " not valid for most Android code

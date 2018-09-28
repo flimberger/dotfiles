@@ -7,4 +7,5 @@ set noexpandtab
 set shiftwidth=8
 set softtabstop=8
 set colorcolumn=80
-set autoindent
+set cindent
+set cinoptions=:0+4

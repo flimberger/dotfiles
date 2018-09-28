@@ -22,6 +22,9 @@ ${HOME}/.vimrc: vimrc
 ${HOME}/.vim: vim
 	ln -s ${PWD}/$< $@
 
+${HOME}/.Xresources:	Xresources
+	ln -s ${PWD}/$< $@
+
 .PHONY: install
 install: ${HOME}/.gitconfig	\
 	${HOME}/.hgrc		\
@@ -29,4 +32,5 @@ install: ${HOME}/.gitconfig	\
 	${HOME}/.profile	\
 	${HOME}/.tmux.conf	\
 	${HOME}/.vimrc		\
-	${HOME}/.vim
+	${HOME}/.vim		\
+	${HOME}/.Xresources

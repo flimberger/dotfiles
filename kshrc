@@ -16,15 +16,16 @@ alias la='ls -a'
 alias ll='ls -l'
 
 # short forms
-alias e=vim
-alias g='./gradlew'
-alias v='vim -R'
+alias E=vim
+alias G='./gradlew'
+alias V='vim -R'
 
 # utilities
 alias usbtty='picocom -b 115200 /dev/ttyUSB0'
 alias breakspaces="tr '[:blank:]' '\n'"
 alias igrep='grep -i'
 alias dgrep='grep -nr'
+alias pshrug="echo '¯\_(ツ)_/¯'"
 
 # FreeBSD commands
 alias exctags=ctags-exuberant

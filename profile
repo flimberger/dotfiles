@@ -20,6 +20,19 @@ fi
 ENV="${HOME}/.kshrc"
 export ENV
 
+if [ -d "${HOME}/lib/profile.d" ]
+then
+	for l in "${HOME}/lib/profile.d/"*.sh
+	do
+		if [ -x "${l}" ]
+		then
+			. "${l}"
+		fi
+	done
+fi
+
+# set up path
+
 if [ -d "${HOME}/.local/bin" ]
 then
 	PATH="${HOME}/.local/bin:${PATH}"
@@ -33,16 +46,5 @@ do
 	fi
 done
 export PATH
-
-if [ -d "${HOME}/lib/sh" ]
-then
-	for l in "${HOME}/lib/sh/"*.sh
-	do
-		if [ -x "${l}" ]
-		then
-			. "${l}"
-		fi
-	done
-fi
 
 eval $(ssh-agent)
