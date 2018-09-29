@@ -2,28 +2,28 @@
 all: install
 
 ${HOME}/.gitconfig: gitconfig
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 ${HOME}/.hgrc: hgrc
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 ${HOME}/.kshrc: kshrc
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 ${HOME}/.profile: profile
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 ${HOME}/.tmux.conf: tmux.conf
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 ${HOME}/.vimrc: vimrc
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 ${HOME}/.vim: vim
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 ${HOME}/.Xresources:	Xresources
-	ln -s ${PWD}/$< $@
+	ln -s ${PWD}/$> $@
 
 .PHONY: install
 install: ${HOME}/.gitconfig	\
