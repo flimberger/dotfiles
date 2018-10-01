@@ -1,9 +1,6 @@
 [ui]
-username = Florian Limberger <flo@snakeoilproductions.net>
+username = Florian Limberger <florian.limberger@inovex.de>
 merge = internal:merge
-
-[web]
-cacerts = /usr/local/share/certs/ca-root-nss.crt
 
 [extensions]
 graphlog =
