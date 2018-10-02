@@ -15,9 +15,9 @@ PAGER=less;  	export PAGER
 
 # Read the profile files from $HOME/lib/profile.d
 # most of them manipulate the environment, especially $PATH
-if [ -d "$HOME/lib/pofile.d" ]
+if [ -d "$HOME/lib/profile.d" ]
 then
-	for f in "$HOME/lib/profile.d"/*
+	for f in "$HOME"/lib/profile.d/*.sh
 	do
 		. "$f"
 	done
