@@ -36,7 +36,7 @@ then
 fi
 if [ -d "$HOME/bin" ]
 then
-	for b in py sh "$arch"
+	for b in scripts "$arch"
 	do
 		if [ -d "$HOME/bin/$b" ]
 		then
@@ -48,13 +48,7 @@ fi
 export PATH
 
 # set ENV to a file invoked each time sh is started for interactive use.
-if [ -n "$KSH_VERSION" ]
-then
-	ENV="$HOME/.kshrc"
-else
-	ENV="$HOME/.shrc"
-fi
-export ENV
+export ENV="$HOME/.kshrc"
 
 # if running bash (improbable, but possible)
 # also, compatibility with Debian/Ubuntu
