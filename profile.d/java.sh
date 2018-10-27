@@ -1,6 +1,6 @@
 # Older gradle versions do not support Java 10
 # export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-export JAVA_HOME="/opt/google/android-studio/jre"
+export JAVA_HOME="$HOME/android/studio/jre"
 
 # These were scrips before, now consolidated into $HOME/bin/sh/java_wrapper
 alias java7='java_wrapper -v 7'
