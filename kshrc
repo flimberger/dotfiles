@@ -36,6 +36,7 @@ alias igrep='grep -i'
 alias dgrep='grep -nr'
 alias pshrug="echo '¯\_(ツ)_/¯'"
 alias avrmk='make -m /usr/home/flo/devel/avr-mk'
+alias aemu="$ANDROID_SDK_ROOT/emulator/emulator"
 
 # local aliases
 if [ "$(uname)" = FreeBSD ]
