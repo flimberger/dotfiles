@@ -1,6 +1,12 @@
 .PHONY: all
 all: install
 
+${HOME}/.aliases: aliases
+	ln -s ${PWD}/aliases $@
+
+${HOME}/.bashrc: bashrc
+	ln -s ${PWD}/bashrc $@
+
 ${HOME}/.gitconfig: gitconfig
 	ln -s ${PWD}/$> $@
 
@@ -26,7 +32,10 @@ ${HOME}/.Xresources:	Xresources
 	ln -s ${PWD}/$> $@
 
 .PHONY: install
-install: ${HOME}/.gitconfig	\
+install:	\
+	${HOME}/.aliases	\
+	${HOME}/.bashrc		\
+	${HOME}/.gitconfig	\
 	${HOME}/.hgrc		\
 	${HOME}/.kshrc		\
 	${HOME}/.profile	\

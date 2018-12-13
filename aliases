@@ -1,0 +1,32 @@
+# listing
+alias ls="ls -F --color=never"
+alias la="ls -Fa --color=never"
+alias ll="ls -Fl --color=never"
+
+# short forms
+alias E=vim
+alias G='./gradlew'
+alias V='vim -R'
+
+# utilities
+alias usbtty='picocom -b 115200 /dev/ttyUSB0'
+alias breakspaces="tr '[:blank:]' '\n'"
+alias igrep='grep -i'
+alias dgrep='grep -nr'
+alias pshrug="echo '¯\_(ツ)_/¯'"
+alias avrmk='make -m /usr/home/flo/devel/avr-mk'
+alias aemu="$ANDROID_SDK_ROOT/emulator/emulator"
+
+# local aliases
+if [ "$(uname)" = FreeBSD ]
+then
+	alias openssl='/usr/local/bin/openssl'
+elif [ "$(uname)" = Linux ]
+then
+	# FreeBSD commands
+	alias exctags=ctags-exuberant
+	alias gmake=/usr/bin/make
+
+	# Linux crap fixes
+	alias nc=nc.openbsd
+fi
