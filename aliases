@@ -4,9 +4,9 @@ alias la="ls -Fa --color=never"
 alias ll="ls -Fl --color=never"
 
 # short forms
-alias E=vim
+alias E=nvim
 alias G='./gradlew'
-alias V='vim -R'
+alias V=nview
 
 # utilities
 alias usbtty='picocom -b 115200 /dev/ttyUSB0'

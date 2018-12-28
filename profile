@@ -10,7 +10,7 @@
 # PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin; export PATH
 # BLOCKSIZE=K;	export BLOCKSIZE
 
-EDITOR=vim;   	export EDITOR
+EDITOR=nvim;   	export EDITOR
 PAGER=less;  	export PAGER
 
 # Read the profile files from $HOME/lib/profile.d
