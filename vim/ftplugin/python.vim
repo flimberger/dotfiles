@@ -5,3 +5,4 @@ set softtabstop=4
 set autoindent
 set shiftround
 set textwidth=79
+set colorcolumn=79
