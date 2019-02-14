@@ -21,7 +21,10 @@ set laststatus=2 " enable statusline
 set nocompatible " don't emulate vi
 set number " line numbers
 set ruler " show my position
+set showcmd  " show command sequences
+set showmode  " show the current mode
 set smarttab
+set ttyfast  " assume fast terminal
 set wildmenu
 
 " syntax highlighting
