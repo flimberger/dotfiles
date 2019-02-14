@@ -17,6 +17,10 @@ alias pshrug="echo '¯\_(ツ)_/¯'"
 alias avrmk='make -m /usr/home/flo/devel/avr-mk'
 alias aemu="$ANDROID_SDK_ROOT/emulator/emulator"
 
+# X11
+alias pclip='xsel -o -b'
+alias sclip='xsel -i -b'
+
 # local aliases
 if [ "$(uname)" = FreeBSD ]
 then
@@ -26,6 +30,7 @@ then
 	# FreeBSD commands
 	alias exctags=ctags-exuberant
 	alias gmake=/usr/bin/make
+	alias pmake=bmake
 
 	# Linux crap fixes
 	alias nc=nc.openbsd
