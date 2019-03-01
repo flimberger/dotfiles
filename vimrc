@@ -28,6 +28,9 @@ set wildmenu
 syntax on
 filetype plugin indent on
 
+" I want to have nearly all files honor the 80 lines limit
+set colorcolumn=80
+
 " colors
 colorscheme lucius
 LuciusDark

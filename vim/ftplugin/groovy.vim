@@ -1,4 +1,4 @@
-set textwidth=79
+set textwidth=80
 set shiftwidth=4
 set tabstop=8
 set expandtab
