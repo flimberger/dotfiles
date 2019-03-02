@@ -110,3 +110,6 @@ function! StripTrailingWhitespace()
 		normal `z
 	endif
 endfunction
+
+set exrc
+set secure
