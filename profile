@@ -10,14 +10,14 @@
 # PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin; export PATH
 # BLOCKSIZE=K;	export BLOCKSIZE
 
-EDITOR=nvim;   	export EDITOR
+EDITOR=vim;   	export EDITOR
 PAGER=less;  	export PAGER
 
 # Read the profile files from $HOME/lib/profile.d
 # most of them manipulate the environment, especially $PATH
-if [ -d "$HOME/lib/pofile.d" ]
+if [ -d "$HOME/lib/profile.d" ]
 then
-	for f in "$HOME/lib/profile.d"/*
+	for f in "$HOME/lib/profile.d"/*.sh
 	do
 		. "$f"
 	done
@@ -28,7 +28,7 @@ if [ -d "$HOME/.local/bin" ]
 then
 	PATH="$HOME/.local/bin:$PATH"
 fi
-arch=`uname -m`
+arch=$(uname -m)
 # Linux reports x86_64, FreeBSD reports amd64, use the latter
 if [ "$arch" = x86_64 ]
 then
