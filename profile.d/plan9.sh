@@ -1,3 +1,8 @@
 # Plan9port installation directory
-PLAN9="$HOME/devel/plan9/plan9port"
-export PLAN9
+export PLAN9=/usr/local/plan9
+case $(uname) in
+FreeBSD) NPROC=$(sysctl hw.ncpu) ;;
+Linux) NPROC=$(nproc) ;;
+esac
+export NPROC
+export PATH="$PATH:$PLAN9/bin"
