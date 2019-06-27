@@ -24,3 +24,5 @@
 	up = pull --ff-only
 [merge]
 	conflictstyle = diff3
+[include]
+	path = ~/lib/config/gitconfig.local
