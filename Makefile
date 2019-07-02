@@ -28,14 +28,17 @@ ${HOME}/.vimrc: vimrc
 ${HOME}/.vim: vim
 	ln -s ${PWD}/vim $@
 
-${HOME}/.Xresources:	Xresources
+${HOME}/.Xresources: Xresources
 	ln -s ${PWD}/Xresources $@
+
+# This target is specific to Debian/Ubuntu
+${HOME}/.xsessionrc: xsessionrc
+	ln -s ${PWD}/xsessionrc $@\
 
 ${HOME}/lib/config:
 	ln -s ${PWD} ${HOME}/lib/config
 .PHONY:	${HOME}/lib/config
 
-.PHONY: install
 install:	\
 	${HOME}/lib/config	\
 	${HOME}/.aliases	\
@@ -48,3 +51,12 @@ install:	\
 	${HOME}/.vimrc		\
 	${HOME}/.vim		\
 	${HOME}/.Xresources
+	${MAKE} install-$$(uname)
+.PHONY: install
+
+install-FreeBSD:
+.PHONY: install-FreeBSD
+
+install-Linux:	\
+	${HOME}/.xsessionrc
+.PHONY: install-Linux
