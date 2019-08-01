@@ -4,7 +4,6 @@ alias la="ls -Fa --color=never"
 alias ll="ls -Fl --color=never"
 
 # short forms
-alias G='./gradlew'
 alias V='vim -R'
 
 # utilities
