@@ -19,5 +19,8 @@ if [ -f "$HOME/.aliases" ]; then
 	source "$HOME/.aliases"
 fi
 
+export HISTFILE="$HOME/.ksh_history"
+export HISTSIZE=2000
+
 # Declare the truth
 echo '“There are two ways to write error free programs, only the third one works.”'
