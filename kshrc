@@ -22,5 +22,4 @@ fi
 export HISTFILE="$HOME/.ksh_history"
 export HISTSIZE=2000
 
-# Declare the truth
-echo '“There are two ways to write error free programs, only the third one works.”'
+echo 'Das Leben ist zu kurz für schlechten Code.'

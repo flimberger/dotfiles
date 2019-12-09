@@ -25,5 +25,7 @@
 	up = pull --ff-only
 [merge]
 	conflictstyle = diff3
+	tool = vimdiff
+	prompt = false
 [include]
 	path = ~/lib/config/gitconfig.local

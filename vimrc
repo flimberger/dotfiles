@@ -116,3 +116,9 @@ function! StripTrailingWhitespace()
 		normal `z
 	endif
 endfunction
+
+" configure the silver searcher
+if executable('ag')
+	set grepprg=ag\ --nogroup\ --nocolor\ --column
+	set grepformat=%f:%l:%c%m
+endif
