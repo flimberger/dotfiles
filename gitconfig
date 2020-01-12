@@ -1,8 +1,6 @@
 [user]
 	name = Florian Limberger
 	email = flo@purplekraken.com
-[core]
-	editor = vim
 [push]
 	default = simple
 [color]
