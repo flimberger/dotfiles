@@ -16,7 +16,7 @@ esac
 export HOST PS1
 
 if [ -f "$HOME/.aliases" ]; then
-	source "$HOME/.aliases"
+	. "$HOME/.aliases"
 fi
 
 export HISTFILE="$HOME/.ksh_history"

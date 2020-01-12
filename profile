@@ -15,11 +15,10 @@ PAGER=less;  	export PAGER
 
 # Read the profile files from $HOME/lib/profile.d
 # most of them manipulate the environment, especially $PATH
-if [ -d "$HOME/lib/profile.d" ]
-then
-	for f in "$HOME/lib/profile.d"/*.sh
-	do
-		. "$f"
+profile="$HOME/lib/profile.d"
+if [ -d "$profile" ]; then
+	for f in $(ls "$profile" | grep '\.sh$'); do
+		. "$profile/$f"
 	done
 fi
 
@@ -34,13 +33,14 @@ if [ "$arch" = x86_64 ]
 then
 	arch=amd64
 fi
-if [ -d "$HOME/bin" ]
+bin="$HOME/bin"
+if [ -d "$bin" ]
 then
 	for b in scripts "$arch"
 	do
-		if [ -d "$HOME/bin/$b" ]
+		if [ -d "$bin/$b" ]
 		then
-			PATH="$HOME/bin/$b:$PATH"
+			PATH="$bin/$b:$PATH"
 		fi
 	done
 fi
