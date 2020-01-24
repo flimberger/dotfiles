@@ -31,16 +31,11 @@ ${HOME}/.vim: vim
 ${HOME}/.Xresources:	Xresources
 	ln -s ${PWD}/Xresources $@
 
-${HOME}/lib/config:
-	ln -s ${PWD} ${HOME}/lib/config
-.PHONY:	${HOME}/lib/config
-
 ${HOME}/.config/user-dirs.dirs:	user-dirs.dirs
 	ln -s ${PWD}/user-dirs.dirs $@
 
 .PHONY: install
 install:	\
-	${HOME}/lib/config	\
 	${HOME}/.aliases	\
 	${HOME}/.bashrc		\
 	${HOME}/.gitconfig	\
