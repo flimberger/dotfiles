@@ -1,7 +1,8 @@
 # listing
-alias ls="ls -F --color=never"
-alias la="ls -Fa --color=never"
-alias ll="ls -Fl --color=never"
+alias ls='ls -F --color=never'
+alias la='ls -Fa --color=never'
+alias ll='ls -Fl --color=never'
+alias lla='ls -Fal --color=never'
 
 # short forms
 alias V=nview
