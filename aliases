@@ -4,8 +4,8 @@ alias la='ls -Fa --color=never'
 alias ll='ls -Fl --color=never'
 alias lla='ls -Fal --color=never'
 
-# short forms
-alias V=nview
+# fix formatting
+alias ag='ag --nogroup --nocolor'
 
 # utilities
 alias usbtty='picocom -b 115200 /dev/ttyUSB0'
