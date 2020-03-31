@@ -23,14 +23,6 @@ alias sclip='xsel -i -b'
 if [ "$(uname)" = FreeBSD ]
 then
 	alias openssl='/usr/local/bin/openssl'
-elif [ "$(uname)" = Linux ]
-then
-	# FreeBSD commands
-	alias exctags=ctags-exuberant
-	alias gmake=/usr/bin/make
-
-	# Linux crap fixes
-	alias nc=nc.openbsd
 fi
 
 alias ag='ag --nogroup --nocolor'
