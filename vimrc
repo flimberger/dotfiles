@@ -35,8 +35,16 @@ filetype plugin indent on
 set colorcolumn=80
 
 " colors
-colorscheme lucius
-LuciusDark
+colorscheme apprentice
+
+function! MyHighlights() abort
+	highlight Comment ctermfg=245
+endfunction
+
+augroup MyColors
+	autocmd!
+	autocmd ColorScheme * call MyHighlights()
+augroup END
 
 " force .h files to be interpreted as C
 " not valid for most Android code
