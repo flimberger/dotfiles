@@ -1,3 +1,6 @@
 [submodule "vim/pack/gitmodules/start/apprentice"]
 	path = vim/pack/gitmodules/start/apprentice
 	url = https://github.com/romainl/Apprentice.git
+[submodule "vim/pack/gitmodules/start/editorconfig"]
+	path = vim/pack/gitmodules/start/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
