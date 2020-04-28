@@ -1,0 +1,6 @@
+borderwidth 3
+
+fontname "Fira"
+
+color activeborder "#ffbf00"
+color inactiveborder "#bfff00"
