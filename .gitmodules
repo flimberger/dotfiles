@@ -4,3 +4,6 @@
 [submodule "vim/pack/gitmodules/start/editorconfig"]
 	path = vim/pack/gitmodules/start/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "vim/pack/gitmodules/fzf"]
+	path = vim/pack/gitmodules/fzf
+	url = https://github.com/junegunn/fzf.vim.git
