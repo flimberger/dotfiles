@@ -18,6 +18,7 @@ set cursorline " highlight current line
 set incsearch
 set hlsearch " highlight search results
 set laststatus=2 " enable statusline
+set lazyredraw " do not redraw in the middle of macros
 set nocompatible " don't emulate vi
 set number " line numbers
 set ruler " show my position
@@ -26,6 +27,15 @@ set showmode  " show the current mode
 set smarttab
 set ttyfast  " assume fast terminal
 set wildmenu
+
+" automatic saving and reloading
+set autoread
+set autowrite
+au FocusLost * :wa
+
+" better splitting behaviour
+set splitright
+set splitbelow
 
 " syntax highlighting
 syntax on
