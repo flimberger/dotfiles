@@ -1,6 +1,19 @@
-borderwidth 3
+borderwidth 4
 
 fontname "Fira"
 
 color activeborder "#ffbf00"
-color inactiveborder "#bfff00"
+color inactiveborder "#00bfff"
+color groupborder "#32CD32"
+
+# normal menu items
+color font "#000000"
+color menubg "#cccccc"
+# highlighted menu items
+color selfont "#ffcc00"
+color menufg "#666666"
+
+command 9term _9term
+command sam Sam
+command xterm xterm
+command tmux "xterm tmux_session"
