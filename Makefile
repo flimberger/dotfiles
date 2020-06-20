@@ -28,6 +28,9 @@ ${HOME}/.vimrc: vimrc
 ${HOME}/.vim: vim
 	ln -s ${PWD}/vim $@
 
+${HOME}/.xsession:	xsession
+	ln -s ${PWD}/xsession $@
+
 ${HOME}/.Xresources:	Xresources
 	ln -s ${PWD}/Xresources $@
 
@@ -45,4 +48,5 @@ install:	\
 	${HOME}/.tmux.conf	\
 	${HOME}/.vimrc		\
 	${HOME}/.vim		\
-	${HOME}/.Xresources
+	${HOME}/.Xresources	\
+	${HOME}/.xsession
