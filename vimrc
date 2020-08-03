@@ -13,9 +13,11 @@ if has("unix")
 endif
 
 set autoindent
+set autoread  " automatically read files that changed on disk
 set backspace=indent,eol,start " new-style backspace behaviour
 set cursorline " highlight current line
 set incsearch
+set hidden  " hide abandoned buffers
 set hlsearch " highlight search results
 set laststatus=2 " enable statusline
 set nocompatible " don't emulate vi
@@ -24,8 +26,13 @@ set ruler " show my position
 set showcmd  " show command sequences
 set showmode  " show the current mode
 set smarttab
+set splitright
+set splitbelow
 set ttyfast  " assume fast terminal
 set wildmenu
+
+" I prefer to use a dotfile for my tags
+set tags=./.tags,.tags
 
 " syntax highlighting
 syntax on
@@ -35,8 +42,19 @@ filetype plugin indent on
 set colorcolumn=80
 
 " colors
-colorscheme lucius
-LuciusDark
+" ======
+
+"colorscheme lucius
+"LuciusDark
+
+colorscheme apprentice
+function! MyHighlights() abort
+	highlight Comment ctermfg=245
+endfunction
+augroup MyColors
+	autocmd!
+	autocmd ColorScheme * call MyHighlights()
+augroup END
 
 " force .h files to be interpreted as C
 " not valid for most Android code
@@ -116,9 +134,3 @@ function! StripTrailingWhitespace()
 		normal `z
 	endif
 endfunction
-
-" configure the silver searcher
-if executable('ag')
-	set grepprg=ag\ --nogroup\ --nocolor\ --column
-	set grepformat=%f:%l:%c%m
-endif
