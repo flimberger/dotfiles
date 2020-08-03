@@ -3,4 +3,5 @@ username = Florian Limberger <florian.limberger@inovex.de>
 merge = internal:merge
 
 [extensions]
+eol =
 graphlog =
