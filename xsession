@@ -17,6 +17,7 @@ xinput set-prop 9 "libinput Scroll Method Enabled" 0 0 0
 # Plan 9 From User Space
 9 plumber &
 9 fontsrv &
+9 stats -lmb &
 
 # composite effects, improve firefox experience
 compton --backend=glx \
