@@ -80,6 +80,8 @@ uninstall:
 .PHONY:	uninstall
 
 uninstall-FreeBSD:
+	rm -f ${HOME}/.config/user-dirs.dirs \
+	    ${HOME}/.xsession
 .PHONY:	uninstall-FreeBSD
 
 uninstall-Linux:
