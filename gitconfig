@@ -16,10 +16,16 @@
 	co = checkout
 	fp = push --force-with-lease
 	g = grep -n
+	root = rev-parse --show-toplevel
 	rs = reset HEAD --
 	rsa = reset --hard HEAD
 	slog = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=iso
+	sq = rebase -i --autosquash
 	st = status
 	up = pull --ff-only
 [merge]
 	conflictstyle = diff3
+	tool = vimdiff
+	prompt = false
+[include]
+	path = ~/lib/config/gitconfig.local

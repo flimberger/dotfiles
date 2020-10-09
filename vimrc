@@ -13,9 +13,11 @@ if has("unix")
 endif
 
 set autoindent
+set autoread  " automatically read files that changed on disk
 set backspace=indent,eol,start " new-style backspace behaviour
 set cursorline " highlight current line
 set incsearch
+set hidden  " hide abandoned buffers
 set hlsearch " highlight search results
 set laststatus=2 " enable statusline
 set lazyredraw " do not redraw in the middle of macros
@@ -25,6 +27,8 @@ set ruler " show my position
 set showcmd  " show command sequences
 set showmode  " show the current mode
 set smarttab
+set splitright
+set splitbelow
 set ttyfast  " assume fast terminal
 set wildmenu
 
@@ -36,6 +40,9 @@ au FocusLost * :wa
 " better splitting behaviour
 set splitright
 set splitbelow
+
+" I prefer to use a dotfile for my tags
+set tags=./.tags,.tags
 
 " syntax highlighting
 syntax on

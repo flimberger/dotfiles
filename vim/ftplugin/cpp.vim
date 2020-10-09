@@ -5,3 +5,4 @@ set softtabstop=4
 set cindent
 set shiftround
 set cinoptions=:0g0+8
+set colorcolumn=100

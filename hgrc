@@ -2,8 +2,6 @@
 username = Florian Limberger <flo@purplekraken.com>
 merge = internal:merge
 
-[web]
-cacerts = /usr/local/share/certs/ca-root-nss.crt
-
 [extensions]
+eol =
 graphlog =

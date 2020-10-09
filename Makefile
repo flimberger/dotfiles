@@ -34,10 +34,14 @@ ${HOME}/.xsession:	xsession
 ${HOME}/.Xresources:	Xresources
 	ln -s ${PWD}/Xresources $@
 
+# Only on FreeBSD
 ${HOME}/.config/user-dirs.dirs:	user-dirs.dirs
 	ln -s ${PWD}/user-dirs.dirs $@
 
-.PHONY: install
+# This target is specific to Debian/Ubuntu
+${HOME}/.xsessionrc: xsessionrc
+	ln -s ${PWD}/xsessionrc $@
+
 install:	\
 	${HOME}/.aliases	\
 	${HOME}/.bashrc		\
@@ -48,5 +52,36 @@ install:	\
 	${HOME}/.tmux.conf	\
 	${HOME}/.vimrc		\
 	${HOME}/.vim		\
-	${HOME}/.Xresources	\
+	${HOME}/.Xresources
+	${MAKE} install-$$(uname)
+.PHONY: install
+
+install-FreeBSD: \
+	${HOME}/.config/user-dirs.dirs \
 	${HOME}/.xsession
+.PHONY: install-FreeBSD
+
+install-Linux: \
+	${HOME}/.xsessionrc
+.PHONY: install-Linux
+
+uninstall:
+	rm -f ${HOME}/.aliases	\
+		${HOME}/.bashrc	\
+		${HOME}/.gitconfig	\
+		${HOME}/.hgrc	\
+		${HOME}/.kshrc	\
+		${HOME}/.profile	\
+		${HOME}/.tmux.conf	\
+		${HOME}/.vimrc	\
+		${HOME}/.vim	\
+		${HOME}/.Xresources
+	${MAKE} uninstall-$$(uname)
+.PHONY:	uninstall
+
+uninstall-FreeBSD:
+.PHONY:	uninstall-FreeBSD
+
+uninstall-Linux:
+	rm -f ${HOME}/.xsessionrc
+.PHONY: uninstall-Linux
