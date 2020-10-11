@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Plan9port installation directory
 export PLAN9=/usr/local/plan9
 case $(uname) in
