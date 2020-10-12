@@ -13,7 +13,6 @@ if has("unix")
 endif
 
 set autoindent
-set autoread  " automatically read files that changed on disk
 set backspace=indent,eol,start " new-style backspace behaviour
 set cursorline " highlight current line
 set incsearch
