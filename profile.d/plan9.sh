@@ -7,8 +7,7 @@ esac
 export NPROC
 export PATH="$PATH:$PLAN9/bin"
 
-export sysname="$(hostname -s)"
-export cputype="$(uname -m)"
-export objtype="$cputype"
-export user="$USER"
-export home="$HOME"
+# Use uppercase variable names as customary on Unix.
+export SYSNAME=$(hostname -s)
+export CPUTYPE=$(uname -m)
+export OBJTYPE="$CPUTYPE"
