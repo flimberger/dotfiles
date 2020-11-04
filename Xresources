@@ -7,11 +7,15 @@
 !Xft.rgba:	rgb
 ! xterm
 XTerm.termName:		xterm-256color
-XTerm.vt100.locale:	true
-XTerm.vt100.background:	rgb:ff/f8/dc
-XTerm.vt100.foreground:	black
-XTerm.vt100.faceName:	Fira Mono Medium:pixelsize=13:antialias=true:autohint=true
+XTerm.vt100.background:	rgb:00/33/66
 XTerm.vt100.cursorColor: rgb:ff/cc/00
+XTerm.vt100.faceName:	Fira Mono Medium:pixelsize=13:antialias=true:autohint=true
+XTerm.vt100.foreground:	rgb:cc/cc/cc
+XTerm.vt100.highlightColor: rgb:ff/cc/00
+XTerm.vt100.highlightColorMode: true
+XTerm.vt100.highlightReverse: false
+XTerm.vt100.highlightTextColor: black
+XTerm.vt100.locale:	true
 ! rxvt-unicode
 ! URxvt.background:	#303030
 URxvt.background:	#223366
