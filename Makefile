@@ -38,10 +38,6 @@ ${HOME}/.Xresources:	Xresources
 ${HOME}/.config/user-dirs.dirs:	user-dirs.dirs
 	ln -s ${PWD}/user-dirs.dirs $@
 
-# This target is specific to Debian/Ubuntu
-${HOME}/.xsessionrc: xsessionrc
-	ln -s ${PWD}/xsessionrc $@
-
 install:	\
 	${HOME}/.aliases	\
 	${HOME}/.bashrc		\
@@ -61,8 +57,7 @@ install-FreeBSD: \
 	${HOME}/.xsession
 .PHONY: install-FreeBSD
 
-install-Linux: \
-	${HOME}/.xsessionrc
+install-Linux:
 .PHONY: install-Linux
 
 uninstall:
@@ -85,5 +80,4 @@ uninstall-FreeBSD:
 .PHONY:	uninstall-FreeBSD
 
 uninstall-Linux:
-	rm -f ${HOME}/.xsessionrc
 .PHONY: uninstall-Linux
