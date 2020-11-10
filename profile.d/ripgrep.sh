@@ -1,1 +1,1 @@
-export RIPGREP_CONFIG_PATH="$HOME/lib/config/ripgreprc"
+export RIPGREP_CONFIG_PATH="$HOME/lib/cfg/ripgreprc"
