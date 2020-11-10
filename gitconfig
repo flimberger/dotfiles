@@ -12,10 +12,12 @@
 	a = add
 	br = branch
 	cb = rev-parse --abbrev-ref HEAD
+	ca = commit --amend
 	ci = commit
 	co = checkout
 	fp = push --force-with-lease
 	g = grep -n
+	pa = add --patch
 	root = rev-parse --show-toplevel
 	rs = reset HEAD --
 	rsa = reset --hard HEAD
