@@ -47,6 +47,13 @@ fi
 # Modifications are done, so now the variables can be exported
 export PATH
 
+# Include machine-specific configuration
+sysname=$(hostname -s)
+if [ -f "$HOME/lib/cfg/profile.$sysname" ]; then
+	. "$HOME/lib/cfg/profile.$sysname"
+fi
+unset sysname
+
 # set ENV to a file invoked each time sh is started for interactive use.
 export ENV="$HOME/.kshrc"
 
