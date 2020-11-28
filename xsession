@@ -11,8 +11,8 @@ setxkbmap \
     -layout us,de,ru \
     -option grp:alt_caps_toggle
 
-# TODO: at least the 9 should be queried somehow...
-xinput set-prop 9 "libinput Scroll Method Enabled" 0 0 0
+tpid=$(xinput --list --name-only | grep TrackPoint | head -1)
+xinput set-prop "$tpid" "libinput Scroll Method Enabled" 0 0 0
 
 # Plan 9 From User Space
 9 plumber &
