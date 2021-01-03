@@ -17,7 +17,8 @@ xinput set-prop "$tpid" "libinput Scroll Method Enabled" 0 0 0
 # Plan 9 From User Space
 9 plumber &
 9 fontsrv &
-9 stats -lmb &
+9 stats -lmbW 80x72@0,0 &
+9 clock -W 80x80@0,80 &
 
 # composite effects, improve firefox experience
 compton --backend=glx \
