@@ -1,3 +1,3 @@
-export CARGO_HOME="$HOME/lib/rust/cargo"
-export RUSTUP_HOME="$HOME/lib/rust/rustup"
+export CARGO_HOME="$HOME/lib/cargo"
+export RUSTUP_HOME="$HOME/lib/rustup"
 export PATH="$CARGO_HOME/bin:$PATH"
