@@ -13,6 +13,7 @@
 	br = branch
 	cb = rev-parse --abbrev-ref HEAD
 	ca = commit --amend
+	caa = commit --all --amend
 	ci = commit
 	co = checkout
 	fp = push --force-with-lease
