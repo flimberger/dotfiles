@@ -1,3 +1,4 @@
 export CARGO_HOME="$HOME/lib/cargo"
 export RUSTUP_HOME="$HOME/lib/rustup"
-export PATH="$CARGO_HOME/bin:$PATH"
+# The bin path is exported by $CARGO_HOME/env
+. "$CARGO_HOME/env"
