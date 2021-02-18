@@ -27,20 +27,17 @@ if [ -d "$HOME/.local/bin" ]
 then
 	PATH="$HOME/.local/bin:$PATH"
 fi
-arch=$(uname -m)
+
+cputype=$(uname -m)
 # Linux reports x86_64, FreeBSD reports amd64, use the latter
-if [ "$arch" = x86_64 ]
-then
-	arch=amd64
-fi
-bin="$HOME/bin"
-if [ -d "$bin" ]
-then
-	for b in scripts "$arch"
-	do
-		if [ -d "$bin/$b" ]
-		then
-			PATH="$bin/$b:$PATH"
+case "$cputype" in
+x86_64) cputype=amd64 ;;
+aarch64) cputype=arm64 ;;
+esac
+if [ -d "$HOME/bin" ]; then
+	for b in scripts "$cputype"; do
+		if [ -d "$HOME/bin/$b" ]; then
+			PATH="$HOME/bin/$b:$PATH"
 		fi
 	done
 fi
