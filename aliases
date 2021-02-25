@@ -1,5 +1,5 @@
 # listing
-alias ls='ls -1F --color=never'
+alias ls='ls -1 --color=never'
 alias la='ls -ACF --color=never'
 alias lc='ls -CF --color=never'
 alias ll='ls -Fl --color=never'
