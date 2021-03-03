@@ -31,7 +31,4 @@ then
 	alias exctags=ctags-exuberant
 	alias gmake=/usr/bin/make
 	alias pmake=bmake
-
-	# Linux crap fixes
-	alias nc=nc.openbsd
 fi
