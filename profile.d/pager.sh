@@ -1,3 +1,4 @@
 command -v lesspipe >/dev/null && eval "$(lesspipe)"
 
-export MANPAGER="less -FX"
+export PAGER=less
+export MANPAGER="less -FQX"
