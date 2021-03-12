@@ -25,6 +25,8 @@ alias sclip='xsel -i -b'
 if [ "$(uname)" = FreeBSD ]
 then
 	alias openssl='/usr/local/bin/openssl'
+	# fight muscle memory
+	alias sudo='echo "do you mean doas?\ndoas"'
 elif [ "$(uname)" = Linux ]
 then
 	# FreeBSD commands
