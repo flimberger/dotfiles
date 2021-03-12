@@ -35,7 +35,8 @@ cwm)
 	    --frame-opacity=1 \
 	    --glx-no-stencil \
 	    --daemon
-	hsetroot -solid 'steel blue'
+	#hsetroot -solid 'steel blue'
+	hsetroot -solid '#262626'
 	exec ssh-agent dbus-launch --exit-with-session cwm
 	;;
 xfce)
