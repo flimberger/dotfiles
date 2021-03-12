@@ -69,6 +69,3 @@ if [ -x /usr/bin/resizewin ] ; then /usr/bin/resizewin -z ; fi
 
 # Display a random cookie on each login.
 if [ -x /usr/bin/fortune ] ; then /usr/bin/fortune freebsd-tips ; fi
-
-# for now, no display manager is used, so this works just fine
-eval $(ssh-agent)
