@@ -10,8 +10,9 @@
 # PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin; export PATH
 # BLOCKSIZE=K;	export BLOCKSIZE
 
-EDITOR=vim;   	export EDITOR
-PAGER=less;  	export PAGER
+EDITOR=vim
+command -v vim >/dev/null || EDITOR=vi
+export EDITOR
 
 # Read the profile files from $HOME/lib/profile.d
 # most of them manipulate the environment, especially $PATH
