@@ -6,8 +6,8 @@
 [color]
 	ui = auto
 [gui]
-	fontui = -family \"Source Sans Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family \"Source Code Pro\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontui = -family \"Fira Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Fira Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 [alias]
 	a = add
 	br = branch
