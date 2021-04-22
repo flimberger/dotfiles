@@ -35,4 +35,6 @@
 [credential]
 	helper = store --file ~/lib/gitcredentials
 [http]
-    cookiefile = ~/lib/gitcookies
+	cookiefile = ~/lib/gitcookies
+[init]
+	defaultBranch = main
