@@ -16,7 +16,7 @@ XTerm.vt100.highlightColor: rgb:ff/dd/00
 XTerm.vt100.highlightColorMode: true
 XTerm.vt100.highlightReverse: false
 XTerm.vt100.highlightTextColor: black
-XTerm.vt100.internalBorder: 8
+XTerm.vt100.internalBorder: 1
 XTerm.vt100.utf8:	true
 XTerm.vt100.locale: false
 
