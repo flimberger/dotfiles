@@ -14,15 +14,6 @@ EDITOR=vim
 command -v vim >/dev/null || EDITOR=vi
 export EDITOR
 
-# Read the profile files from $HOME/lib/profile.d
-# most of them manipulate the environment, especially $PATH
-profile="$HOME/lib/profile.d"
-if [ -d "$profile" ]; then
-	for f in $(ls "$profile" | grep '\.sh$'); do
-		. "$profile/$f"
-	done
-fi
-
 # Set up local $PATH
 if [ -d "$HOME/.local/bin" ]
 then
@@ -42,8 +33,14 @@ if [ -d "$HOME/bin" ]; then
 		fi
 	done
 fi
-# Modifications are done, so now the variables can be exported
-export PATH
+# Read the profile files from $HOME/lib/profile.d
+# most of them manipulate the environment, especially $PATH
+profile="$HOME/lib/profile.d"
+if [ -d "$profile" ]; then
+	for f in $(ls "$profile" | grep '\.sh$'); do
+		. "$profile/$f"
+	done
+fi
 
 # Include machine-specific configuration
 sysname=$(hostname -s)
@@ -52,6 +49,8 @@ if [ -f "$HOME/lib/cfg/profile.$sysname" ]; then
 fi
 unset sysname
 
+# Modifications are done, so now the variables can be exported
+export PATH
 # set ENV to a file invoked each time sh is started for interactive use.
 export ENV="$HOME/.kshrc"
 
