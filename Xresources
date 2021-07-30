@@ -38,27 +38,14 @@ XTerm.vt100.translations: #override \n\
 
 ! Scrollbar is hidden by default (there is no use for it when tmux is running),
 ! but it can be enabled by the menu or a keybinding above.
-XTerm.vt100.scrollBar: false
-XTerm.vt100.scrollbar.background: rgb:cc/cc/dd
-XTerm.vt100.scrollbar.foreground: rgb:00/26/4c
-XTerm.vt100.scrollbar.thumb: black
-XTerm.vt100.scrollbar.borderWidth: 0
+XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollbar.background: NBG
+XTerm.vt100.scrollbar.foreground: NFG
+XTerm.vt100.scrollbar.borderColor: NFG
+! This is a bitmap from /usr/include/X11/bitmaps; gray1 is the default.
+XTerm.vt100.scrollbar.thumb: gray1
+XTerm.vt100.scrollBarBorder: 2
 ! Reverse the scroll direction on click to be consistent with the behaviour from Plan 9.
 XTerm.vt100.scrollbar.translations: #override \n\
     <Btn1Down>: StartScroll(Backward) \n\
     <Btn3Down>: StartScroll(Forward)
-
-! rxvt-unicode
-! URxvt.background:	#303030
-URxvt.background:	#223366
-URxvt.foreground:	#d7d7d7
-URxvt.cursorColor:	#ffaf00
-URxvt.font:		xft:Roboto Mono Medium:pixelsize=13:antialias=true:autohint=true
-URxvt.letterSpace:	-1
-URxvt*termName:		rxvt-unicode-256color
-URxvt*title:		Virtual Terminal
-URxvt*saveLines:	65536
-URxvt.scrollBar:	no
-URxvt*skipScroll:	true
-URxvt*jumpScroll:	true
-URxvt*visualBell: 	false
