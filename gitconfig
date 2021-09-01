@@ -38,3 +38,5 @@
 	cookiefile = ~/lib/gitcookies
 [init]
 	defaultBranch = main
+[rerere]
+	enabled = true
