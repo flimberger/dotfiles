@@ -41,7 +41,7 @@ set splitright
 set splitbelow
 
 " I prefer to use a dotfile for my tags
-set tags=./.tags,.tags
+set tags=./.tags,.tags,./tags,tags
 
 " syntax highlighting
 syntax on
