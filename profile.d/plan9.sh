@@ -7,7 +7,3 @@ Linux) NPROC=$(nproc) ;;
 esac
 export NPROC
 export PATH="$PATH:$PLAN9/bin"
-
-export sysname=$(hostname -s)
-export cputype=$(uname -m)
-export objtype="$cputype"
