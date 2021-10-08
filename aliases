@@ -1,9 +1,7 @@
 # listing
-alias ls='ls -1 --color=never'
-alias la='ls -ACF --color=never'
-alias lc='ls -CF --color=never'
-alias ll='ls -Fl --color=never'
-alias lla='ls -FAl --color=never'
+alias ls='ls -1A --color=never'
+alias lc='ls -ACF --color=never'
+alias ll='ls -Al --color=never'
 
 # fix formatting
 alias ag='ag --nogroup --nocolor'
