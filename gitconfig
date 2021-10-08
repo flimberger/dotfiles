@@ -10,10 +10,11 @@
 	fontdiff = -family \"Fira Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 [alias]
 	a = add
+	au = add --update
 	br = branch
-	cb = rev-parse --abbrev-ref HEAD
 	ca = commit --amend
 	caa = commit --all --amend
+	cb = rev-parse --abbrev-ref HEAD
 	ci = commit
 	co = checkout
 	fp = push --force-with-lease
@@ -25,13 +26,12 @@
 	slog = log --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=iso
 	sq = rebase -i --autosquash
 	st = status
+	sup = submodule update --init --recursive
 	up = pull --ff-only
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
 	prompt = false
-[include]
-	path = ~/lib/config/gitconfig.local
 [credential]
 	helper = store --file ~/lib/gitcredentials
 [http]
