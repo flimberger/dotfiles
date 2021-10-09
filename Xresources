@@ -1,51 +1,36 @@
-! xft
-!Xft.autohint:	0
-!Xft.lcdfilter:	lcddefault
-!Xft.hintstyle:	hintslight
-!Xft.hinting:	0
-!Xft.antialias:	1
-!Xft.rgba:	rgb
-
-#ifdef DARK
-#define CUR	chartreuse
-#define NBG	grey5
-#define NFG	goldenrod
-#else
 #define CUR	dark orange
-#define NBG	cornsilk
-#define NFG	black
-#endif
+#define NBG	#4060FF
+#define NFG	white
 
 ! xterm
-XTerm.termName:			xterm-256color
-XTerm.*.background:		NBG
+XTerm.termName:		xterm-256color
+XTerm.*.background:	NBG
 XTerm.*.cursorColor:	CUR
-!XTerm.*.faceName:		Fira Mono Medium:pixelsize=15:antialias=true:autohint=true
-XTerm.*.faceName:		Fira Mono Medium:pixelsize=13:antialias=true:autohint=true
-XTerm.*.foreground:		NFG
-XTerm.*.internalBorder: 	1
+XTerm.*.faceName:	Fira Mono Medium:pixelsize=13:antialias=true:autohint=true
+!XTerm.*.faceName:	MxPlus ToshibaSat 9x16:pixelsize=16:antialias=true:autohint=true
+XTerm.*.foreground:	NFG
+XTerm.*.internalBorder:	5
 XTerm.*.utf8:		true
-XTerm.*.locale: 		false
+XTerm.*.locale: 	false
 
 ! Key bindings
-XTerm.*.translations: #override \n\
-    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
-    Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
-    Ctrl <Key> minus: smaller-vt-font() \n\
-    Ctrl <Key> plus: larger-vt-font() \n\
-    Ctrl <Key> 0: set-vt-font(d) \n\
-    Ctrl <Key> `: set-scrollbar(toggle)
+XTerm.*.translations:	#override \n\
+    Ctrl Shift <Key>C:	copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V:	insert-selection(CLIPBOARD) \n\
+    Ctrl <Key> minus:	smaller-vt-font() \n\
+    Ctrl <Key> plus:	larger-vt-font() \n\
+    Ctrl <Key> 0:	set-vt-font(d) \n\
+    Ctrl <Key> `:	set-scrollbar(toggle)
 
-! Scrollbar is hidden by default (there is no use for it when tmux is running),
-! but it can be enabled by the menu or a keybinding above.
-XTerm.*.scrollBar: true
-XTerm.*.scrollbar.background: NBG
-XTerm.*.scrollbar.foreground: NFG
-XTerm.*.scrollbar.borderColor: NFG
+XTerm.*.rightScrollBar:		false
+XTerm.*.scrollBar:		true
+XTerm.*.scrollbar.background:	NBG
+XTerm.*.scrollbar.foreground:	white
+XTerm.*.scrollbar.borderColor:	white
 ! This is a bitmap from /usr/include/X11/bitmaps; gray1 is the default.
-XTerm.*.scrollbar.thumb: gray1
-XTerm.*.scrollBarBorder: 2
+XTerm.*.scrollbar.thumb:	hlines3
+XTerm.*.scrollBarBorder:	2
 ! Reverse the scroll direction on click to be consistent with the behaviour from Plan 9.
-XTerm.*.scrollbar.translations: #override \n\
-    <Btn1Down>: StartScroll(Backward) \n\
-    <Btn3Down>: StartScroll(Forward)
+XTerm.*.scrollbar.translations:	#override \n\
+    <Btn1Down>:	StartScroll(Backward) \n\
+    <Btn3Down>:	StartScroll(Forward)

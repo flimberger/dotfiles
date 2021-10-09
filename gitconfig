@@ -40,3 +40,15 @@
 	defaultBranch = main
 [rerere]
 	enabled = true
+[color "branch"]
+	current = bold cyan
+	remote = yellow
+[color "diff"]
+	old = white red
+	new = black green
+[color "interactive"]
+	prompt = white
+[color "status"]
+	changed = yellow
+	unmerged = bold yellow
+	untracked = yellow
