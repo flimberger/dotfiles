@@ -24,6 +24,8 @@ command audacious	audacious
 command audacity	audacity
 command endless-sky	endless-sky
 command firefox		firefox
+command fsam		"sam -t fsamterm"
+command fterm		"fterm -l /usr/local/plan9/bin/9 rc -l"
 command ghidra		ghidra
 command gimp		gimp
 command inkscape	inkscape
