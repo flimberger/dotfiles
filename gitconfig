@@ -17,6 +17,7 @@
 	cb = rev-parse --abbrev-ref HEAD
 	ci = commit
 	co = checkout
+	f = fetch --all --prune
 	fp = push --force-with-lease
 	g = grep -n
 	pa = add --patch
@@ -27,7 +28,7 @@
 	sq = rebase -i --autosquash
 	st = status
 	sup = submodule update --init --recursive
-	up = pull --ff-only
+	up = pull --all --ff-only
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
