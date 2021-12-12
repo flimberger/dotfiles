@@ -22,7 +22,7 @@ xinput set-prop "$tpid" "libinput Scroll Method Enabled" 0 0 0
 
 xclock -render -geometry 80x80+0+72 &
 
-hsetroot -solid '#262626'
+hsetroot -solid gray25
 
 # composite effects, improves firefox experience
 compton --backend=glx \
