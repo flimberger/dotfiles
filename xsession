@@ -30,8 +30,7 @@ compton --backend=glx \
     --no-dock-shadow \
     --no-dnd-shadow \
     --shadow-opacity=0 \
-    --menu-opacity=1 \
-    --frame-opacity=1 \
+    --focus-exclude "\"class_g = 'Firefox'\"" \
     --glx-no-stencil \
     --daemon
 
