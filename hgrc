@@ -1,6 +1,7 @@
 [ui]
 username = Florian Limberger <flo@purplekraken.com>
 merge = internal:merge
+color = no
 
 [extensions]
 eol =
