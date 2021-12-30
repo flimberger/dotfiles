@@ -21,7 +21,6 @@ autogroup 0 stats
 autogroup 0 xclock
 
 command 9term		9t
-command atril		atril
 command audacious	audacious
 command audacity	audacity
 command endless-sky	endless-sky
@@ -34,13 +33,14 @@ command inkscape	inkscape
 command intellij	idea
 command keepass 	keepassxc
 command openttd		openttd
+command qpdfview	qpdfview
 command sam		9sam
 command sublimetext	sublime
+command supertuxkart	supertuxkart
 command telegram 	telegram-desktop
 command thunderbird	thunderbird
 command tmux		"xterm tmux_session"
 command transmission	transmission-gtk
 command tuxguitar	tuxguitar
-command vscode		vscode
-command xournal		xournal
+command vlc		vlc
 command xterm		xterm
