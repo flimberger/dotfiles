@@ -16,8 +16,10 @@ export EDITOR
 
 # Set up local $PATH
 if [ -d "$HOME/.local/bin" ]
-then
-	PATH="$HOME/.local/bin:$PATH"
+then	PATH="$HOME/.local/bin:$PATH"
+fi
+if [ -d /local/bin ]
+then	PATH="/local/bin:$PATH"
 fi
 
 cputype=$(uname -m)
