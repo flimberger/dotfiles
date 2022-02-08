@@ -2,16 +2,16 @@ borderwidth 4
 
 fontname "Bitter"
 
-color activeborder	"#eec900"
+color activeborder	"#FFCC00"
 color inactiveborder	"#000000"
-color groupborder	"#32CD32"
+color groupborder	"#00FFFF"
 
 # normal menu items
 color font	"#000000"
-color menubg	"#bebebe"
+color menubg	"#BEBEBE"
 # menu items
 color selfont	"#000000"
-color menufg	"#eec900"
+color menufg	"#FFCC00"
 
 # Status display
 # Inspired by https://www.tumfatig.net/20200923/a-simple-shell-status-bar-for-cwm/
