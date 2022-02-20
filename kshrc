@@ -15,12 +15,14 @@ esac
 
 export HOST PS1
 
-if [ -f "$HOME/.aliases" ]; then
-	. "$HOME/.aliases"
-fi
+test -f "$HOME/lib/cfg/aliases" && . "$HOME/lib/cfg/aliases"
+test -f "$HOME/lib/cfg/ksh_completions" && . "$HOME/lib/cfg/ksh_completions"
 
 export HISTFILE="$HOME/.ksh_history"
-export HISTSIZE=2000
+export HISTSIZE=5000
+
+# Use emacs bindings instead of vi
+set -o emacs
 
 # Declare the truth
 #echo '“There are two ways to write error free programs, only the third one works.”'

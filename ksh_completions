@@ -1,0 +1,24 @@
+# https://rubenerd.com/custom-tab-completions-in-oksh/
+
+hosts=$(awk '/^Host/ { print $2 }' "$HOME/.ssh/config")
+set -A complete_ssh -- $hosts
+unset hosts
+
+set -A complete_git -- add branch checkout commit diff fetch log rebase origin master pull push submodule status
+set -A complete_hugo -- check config convert env gen help import list new server version
+
+case $(uname) in
+FreeBSD)
+	svcs=$(ls /etc/rc.d)
+	svcs="$svcs $(ls /usr/local/etc/rc.d)"
+	set -A complete_service -- $svcs
+	unset svcs
+
+	set -A complete_pkg -- clean info install lock search unlock update upgrade
+	set -A complete_zfs -- clone create list receive send set snapshot
+	set -A complete_zpool -- create export import scrub set
+	;;
+Linux)
+	set -A complete_systemctl -- list-unit-files poweroff reboot start stop
+	;;
+esac
