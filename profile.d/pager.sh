@@ -1,5 +1,5 @@
 command -v lesspipe >/dev/null && eval $(lesspipe)
-export LESS=-FQX
+export LESS=-FQXs
 export MANPAGER=less
 
 if command -v p >/dev/null; then
