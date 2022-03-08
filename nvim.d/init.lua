@@ -6,3 +6,7 @@ vim.opt.number = true
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+
+-- color scheme
+vim.opt.termguicolors = true -- enable true color support
+vim.api.nvim_command "colorscheme deepsea"

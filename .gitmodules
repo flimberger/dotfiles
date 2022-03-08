@@ -7,3 +7,6 @@
 [submodule "vim/pack/gitmodules/fzf"]
 	path = vim/pack/gitmodules/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "nvim.d/pack/gitmodules/start/deepsea"]
+	path = nvim.d/pack/gitmodules/start/deepsea
+	url = https://codeberg.org/flimberger/deepsea.nvim.git
