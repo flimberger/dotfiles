@@ -16,6 +16,9 @@ ${HOME}/.hgrc: hgrc
 ${HOME}/.kshrc: kshrc
 	ln -s ${PWD}/kshrc $@
 
+$(HOME)/.config/nvim:
+	ln -s $(PWD)/nvim.d $@
+
 ${HOME}/.profile: profile
 	ln -s ${PWD}/profile $@
 
@@ -44,6 +47,7 @@ install:	\
 	${HOME}/.gitconfig	\
 	${HOME}/.hgrc		\
 	${HOME}/.kshrc		\
+	$(HOME)/.config/nvim	\
 	${HOME}/.profile	\
 	${HOME}/.tmux.conf	\
 	${HOME}/.vimrc		\
