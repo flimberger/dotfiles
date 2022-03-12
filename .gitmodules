@@ -10,3 +10,6 @@
 [submodule "nvim.d/pack/gitmodules/start/deepsea"]
 	path = nvim.d/pack/gitmodules/start/deepsea
 	url = https://codeberg.org/flimberger/deepsea.nvim.git
+[submodule "nvim.d/pack/gitmodules/start/lualine"]
+	path = nvim.d/pack/gitmodules/start/lualine
+	url = https://github.com/nvim-lualine/lualine.nvim.git
