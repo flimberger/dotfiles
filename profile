@@ -10,7 +10,7 @@
 # PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin; export PATH
 # BLOCKSIZE=K;	export BLOCKSIZE
 
-EDITOR=vim
+EDITOR=nvim
 command -v vim >/dev/null || EDITOR=vi
 export EDITOR
 
