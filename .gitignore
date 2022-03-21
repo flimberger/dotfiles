@@ -1,5 +1,3 @@
 npmrc
 tmux_sessionrc
-/vim/.*
-/vim/colors
 /gitconfig.local
