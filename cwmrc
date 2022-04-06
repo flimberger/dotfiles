@@ -3,8 +3,8 @@ borderwidth 4
 fontname "Bitter"
 
 color activeborder	"#FFCC00"
-color inactiveborder	"#000000"
-color groupborder	"#00FFFF"
+color inactiveborder	"#AAAAAA"
+color groupborder	"#FFDD00"
 
 # normal menu items
 color font	"#000000"
@@ -37,6 +37,7 @@ command qpdfview	qpdfview
 command sam		9sam
 command sublimetext	sublime
 command supertuxkart	supertuxkart
+command tcsh		"xterm -e tcsh -l"
 command telegram 	telegram-desktop
 command thunderbird	thunderbird
 command tmux		"xterm tmux_session"
