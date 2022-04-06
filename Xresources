@@ -1,6 +1,7 @@
 #define CUR	dark orange
-#define NBG	#4060FF
-#define NFG	white
+!#define NBG	#355ACE
+#define NBG	#123456
+#define NFG	#AAAAAA
 
 ! xterm
 XTerm.termName:		xterm-256color
@@ -25,10 +26,10 @@ XTerm.*.translations:	#override \n\
 XTerm.*.rightScrollBar:		false
 XTerm.*.scrollBar:		true
 XTerm.*.scrollbar.background:	NBG
-XTerm.*.scrollbar.foreground:	white
-XTerm.*.scrollbar.borderColor:	white
+XTerm.*.scrollbar.foreground:	NFG
+XTerm.*.scrollbar.borderColor:	NFG
 ! This is a bitmap from /usr/include/X11/bitmaps; gray1 is the default.
-XTerm.*.scrollbar.thumb:	hlines3
+XTerm.*.scrollbar.thumb:	black
 XTerm.*.scrollBarBorder:	2
 ! Reverse the scroll direction on click to be consistent with the behaviour from Plan 9.
 XTerm.*.scrollbar.translations:	#override \n\
