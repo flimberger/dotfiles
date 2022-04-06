@@ -2,17 +2,25 @@
 
 . .profile
 
-xrdb -merge .Xresources
+xrdb -merge lib/cfg/Xresources
 
-# For the thinkpad, the model is "thinkpad"
-# For the Model M, the model is "pc102"
-setxkbmap \
-    -model pc102 \
-    -layout us,de,ru \
-    -option grp:alt_caps_toggle
+case $(hostname -s) in
+zodiacal)
+	# For the thinkpad, the model is "thinkpad"
+	# For the Model M, the model is "pc102"
+	setxkbmap \
+		-model pc102 \
+		-layout us,de,ru \
+		-option grp:alt_caps_toggle
 
-tpid=$(xinput --list --name-only | grep TrackPoint | head -1)
-xinput set-prop "$tpid" "libinput Scroll Method Enabled" 0 0 0
+	# disable touchpad
+	touchpadctl -d
+
+	tpid=$(xinput --list --name-only | grep TrackPoint | head -1)
+	xinput set-prop "$tpid" "libinput Scroll Method Enabled" 0 0 0
+	unset tpid
+	;;
+esac
 
 # Plan 9 From User Space
 9 plumber
@@ -22,7 +30,11 @@ xinput set-prop "$tpid" "libinput Scroll Method Enabled" 0 0 0
 
 xclock -render -geometry 80x80+0+72 &
 
-hsetroot -solid gray25
+wp=pic/wp/simonstalenhag/wevegotbandwidth.jpg
+if [ -f "$wp" ]
+then	hsetroot -full "$wp"
+else	hsetroot -solid gray25
+fi
 
 # composite effects, improves firefox experience
 compton --backend=glx \
