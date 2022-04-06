@@ -11,7 +11,7 @@
 # BLOCKSIZE=K;	export BLOCKSIZE
 
 EDITOR=nvim
-command -v vim >/dev/null || EDITOR=vi
+command -v nvim >/dev/null || EDITOR=vi
 export EDITOR
 
 # Set up local $PATH
