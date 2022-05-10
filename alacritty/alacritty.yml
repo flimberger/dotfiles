@@ -1,0 +1,42 @@
+window:
+  dimensions:
+    columns: 132
+    lines: 45
+font:
+  normal:
+    family: IBM Plex Mono
+    style: Semibold
+  bold:
+    family: IBM Plex Mono
+    style: Bold
+  italic:
+    family: IBM Plex Mono
+    style: Italic
+  size: 9
+colors:
+  primary:
+    background: '0x123456'
+    foreground: '0xCCCCCC'
+  cursor:
+    text: '0x000000'
+    cursor: '0xFFCC00'
+  normal:
+    black: '0x000000'
+    red: '0x9C0000'
+    green: '0x00CC00'
+    yellow: '0xFFCC00'
+    blue: '0x00009C'
+    magenta: '0xCC009C'
+    cyan: '0x009CCC'
+    white: '0xCCCCCC'
+  bright:
+    black: '0x333333'
+    red: '0xEF0000'
+    green: '0x00FF00'
+    yellow: '0xFFEF00'
+    blue: '0x0000EF'
+    magenta: '0xFF00EF'
+    cyan: '0x00EFFF'
+    white: '0xFFFFFF'
+env:
+  TERM: xterm-256color
