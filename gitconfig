@@ -1,6 +1,6 @@
 [user]
 	name = Florian Limberger
-	email = flo@purplekraken.com
+	email = florian.limberger@inovex.de
 [push]
 	default = simple
 [color]
@@ -15,7 +15,7 @@
 	ca = commit --amend
 	caa = commit --all --amend
 	cb = rev-parse --abbrev-ref HEAD
-	ci = commit -s
+	ci = commit
 	co = checkout
 	f = fetch --all --prune
 	fp = push --force-with-lease
