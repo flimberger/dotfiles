@@ -6,7 +6,10 @@ ${HOME}/.aliases: aliases
 
 ${HOME}/.bashrc: bashrc
 	ln -s ${PWD}/bashrc $@
-
+$(HOME)/.config/alacritty:
+	ln -s $(PWD)/alacritty $@
+$(HOME)/.config/nvim:
+	ln -s $(PWD)/nvim $@
 ${HOME}/.gitconfig: gitconfig
 	ln -s ${PWD}/gitconfig $@
 
@@ -16,20 +19,11 @@ ${HOME}/.hgrc: hgrc
 ${HOME}/.kshrc: kshrc
 	ln -s ${PWD}/kshrc $@
 
-$(HOME)/.config/nvim:
-	ln -s $(PWD)/nvim.d $@
-
 ${HOME}/.profile: profile
 	ln -s ${PWD}/profile $@
 
 ${HOME}/.tmux.conf: tmux.conf
 	ln -s ${PWD}/tmux.conf $@
-
-${HOME}/.vimrc: vimrc
-	ln -s ${PWD}/vimrc $@
-
-${HOME}/.vim: vim
-	ln -s ${PWD}/vim $@
 
 ${HOME}/.xsession:	xsession
 	ln -s ${PWD}/xsession $@
@@ -44,14 +38,14 @@ ${HOME}/.config/user-dirs.dirs:	user-dirs.dirs
 install:	\
 	${HOME}/.aliases	\
 	${HOME}/.bashrc		\
+	${HOME}/.config/alacritty	\
+	${HOME}/.config/nvim	\
 	${HOME}/.gitconfig	\
 	${HOME}/.hgrc		\
 	${HOME}/.kshrc		\
 	$(HOME)/.config/nvim	\
 	${HOME}/.profile	\
 	${HOME}/.tmux.conf	\
-	${HOME}/.vimrc		\
-	${HOME}/.vim		\
 	${HOME}/.Xresources
 	${MAKE} install-$$(uname)
 .PHONY: install
