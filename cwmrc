@@ -30,7 +30,6 @@ command fterm		"fterm -l /usr/local/plan9/bin/9 rc -l"
 command ghidra		ghidra
 command gimp		gimp
 command inkscape	inkscape
-command intellij	idea
 command keepass 	keepassxc
 command openttd		openttd
 command qpdfview	qpdfview
@@ -39,9 +38,9 @@ command sublimetext	sublime
 command supertuxkart	supertuxkart
 command tcsh		"xterm -e tcsh -l"
 command telegram 	telegram-desktop
+command term		alacritty
 command thunderbird	thunderbird
-command tmux		"xterm tmux_session"
+command tmux		"alacritty tmux_session"
 command transmission	transmission-gtk
 command tuxguitar	tuxguitar
 command vlc		vlc
-command xterm		xterm
