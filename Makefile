@@ -10,6 +10,8 @@ $(HOME)/.config/alacritty:
 	ln -s $(PWD)/alacritty $@
 $(HOME)/.config/nvim:
 	ln -s $(PWD)/nvim $@
+$(HOME)/.config/user-dirs.dirs:	user-dirs.dirs
+	ln -s $(PWD)/user-dirs.dirs $@
 ${HOME}/.gitconfig: gitconfig
 	ln -s ${PWD}/gitconfig $@
 
@@ -31,19 +33,15 @@ ${HOME}/.xsession:	xsession
 ${HOME}/.Xresources:	Xresources
 	ln -s ${PWD}/Xresources $@
 
-# Only on FreeBSD
-${HOME}/.config/user-dirs.dirs:	user-dirs.dirs
-	ln -s ${PWD}/user-dirs.dirs $@
-
 install:	\
 	${HOME}/.aliases	\
 	${HOME}/.bashrc		\
 	${HOME}/.config/alacritty	\
-	${HOME}/.config/nvim	\
+	$(HOME)/.config/nvim	\
+	$(HOME)/.config/user-dirs.dirs \
 	${HOME}/.gitconfig	\
 	${HOME}/.hgrc		\
 	${HOME}/.kshrc		\
-	$(HOME)/.config/nvim	\
 	${HOME}/.profile	\
 	${HOME}/.tmux.conf	\
 	${HOME}/.Xresources
@@ -51,7 +49,6 @@ install:	\
 .PHONY: install
 
 install-FreeBSD: \
-	${HOME}/.config/user-dirs.dirs \
 	${HOME}/.xsession
 .PHONY: install-FreeBSD
 
@@ -66,6 +63,7 @@ uninstall:
 		${HOME}/.kshrc	\
 		${HOME}/.profile	\
 		${HOME}/.tmux.conf	\
+		$(HOME)/.config/user-dirs.dirs \
 		${HOME}/.vimrc	\
 		${HOME}/.vim	\
 		${HOME}/.Xresources
@@ -73,8 +71,7 @@ uninstall:
 .PHONY:	uninstall
 
 uninstall-FreeBSD:
-	rm -f ${HOME}/.config/user-dirs.dirs \
-	    ${HOME}/.xsession
+	rm -f $(HOME)/.xsession
 .PHONY:	uninstall-FreeBSD
 
 uninstall-Linux:
