@@ -35,6 +35,8 @@ if [ -d "$HOME/bin" ]; then
 		fi
 	done
 fi
+# Add machine-local PATH
+PATH="/local/bin:$PATH"
 # Read the profile files from $HOME/lib/profile.d
 # most of them manipulate the environment, especially $PATH
 profile="$HOME/lib/profile.d"
@@ -43,6 +45,7 @@ if [ -d "$profile" ]; then
 		. "$profile/$f"
 	done
 fi
+unset profile
 
 # Include machine-specific configuration
 sysname=$(hostname -s)
