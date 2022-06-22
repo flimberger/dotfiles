@@ -1,3 +1,4 @@
 npmrc
 tmux_sessionrc
 /gitconfig.local
+/nvim.d/pack/local
