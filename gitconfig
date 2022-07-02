@@ -3,8 +3,9 @@
 	email = florian.limberger@inovex.de
 [push]
 	default = simple
-[color]
-	ui = auto
+[color "diff"]
+	old = white red
+	new = black green
 [gui]
 	fontui = -family \"Fira Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"Fira Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
