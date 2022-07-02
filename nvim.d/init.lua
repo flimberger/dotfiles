@@ -19,6 +19,8 @@ vim.g.mapleader = " "
 defmapopts = { noremap = true, silent = true }
 
 vim.api.nvim_set_keymap("n", "<C-P>", "<cmd>GFiles<CR>", defmapopts)
+vim.api.nvim_set_keymap("n", "<Leader>h", "<cmd>hide<CR>", defmapopts)
+vim.api.nvim_set_keymap("n", "<Leader>t", "<cmd>tabnew | GFiles<CR>", defmapopts)
 
 -- more complex configuration is separated out into separate files
 require('cfg/lsp')
