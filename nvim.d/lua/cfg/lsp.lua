@@ -24,6 +24,11 @@ local function on_attach(client, bufn)
 	map(bufn, 'n', '<Leader>ch', '<cmd>lua vim.lsp.buf.clear_references()<CR>', options)
 	map(bufn, 'n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', options)
 	map(bufn, 'n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', options)
+	map(bufn, 'n', '<Leader>w', '<cmd>lua vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.WARN, })<CR>', options)
+	map(bufn, 'n', '<Leader>W', '<cmd>lua vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.WARN, })<CR>', options)
+	map(bufn, 'n', '<Leader>e', '<cmd>lua vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR, })<CR>', options)
+	map(bufn, 'n', '<Leader>E', '<cmd>lua vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR, })<CR>', options)
+	map(bufn, 'n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>', options)
 end
 
 local lsp = require('lspconfig')
