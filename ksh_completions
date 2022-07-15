@@ -5,12 +5,12 @@ set -A complete_ssh -- $hosts
 set -A complete_scp -- $hosts
 unset hosts
 
-set -A complete_git -- add branch checkout commit diff fetch log rebase origin master pull push submodule status worktree
-set -A complete_hugo -- check config convert env gen help import list new server version
-set -A complete_tmux -- attach-session kill-server kill-session list-clients list-commands list-sessions start-server
-set -A complete_zfs -- clone create destroy diff get jail list mount promote receive send set share snapshot upgrade
-set -A complete_zpool -- add attach checkpoint clear create destroy detach export get history import initialize iostat labelclear \
-			list offline online reguid remove replace scrub set split status upgrade
+set -A complete_git_1 -- add branch checkout commit diff fetch log rebase origin master pull push submodule status worktree
+set -A complete_hugo_1 -- check config convert env gen help import list new server version
+set -A complete_tmux_1 -- attach-session kill-server kill-session list-clients list-commands list-sessions start-server
+set -A complete_zfs_1 -- clone create destroy diff get jail list mount promote receive send set share snapshot upgrade
+set -A complete_zpool_1 -- add attach checkpoint clear create destroy detach export get history import initialize iostat labelclear \
+	list offline online reguid remove replace scrub set split status upgrade
 
 case $(uname) in
 FreeBSD)
