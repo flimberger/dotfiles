@@ -5,7 +5,7 @@ set -A complete_ssh -- $hosts
 set -A complete_scp -- $hosts
 unset hosts
 
-set -A complete_git_1 -- add branch checkout commit diff fetch log rebase origin master pull push submodule status worktree
+set -A complete_git_1 -- add branch checkout commit diff fetch format-patch log rebase origin master pull push submodule status worktree
 set -A complete_hugo_1 -- check config convert env gen help import list new server version
 set -A complete_tmux_1 -- attach-session kill-server kill-session list-clients list-commands list-sessions start-server
 set -A complete_zfs_1 -- clone create destroy diff get jail list mount promote receive send set share snapshot upgrade
