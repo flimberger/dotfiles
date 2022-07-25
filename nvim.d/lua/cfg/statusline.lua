@@ -39,9 +39,9 @@ require('lualine').setup {
 			'branch',
 			'diff',
 			make_gap(p.darkblue),
-			{ 'diagnostics', source = { 'nvim' }, sections = { 'error' }, diagnostics_color = { error = { bg = p.red, fg = p.white } }, separator = { right = '' }, },
+			{ 'diagnostics', source = { 'nvim_lsp' }, sections = { 'error' }, diagnostics_color = { error = { bg = p.red, fg = p.white } }, separator = { right = '' }, },
 			make_gap(p.mediumblue),
-			{ 'diagnostics', source = { 'nvim' }, sections = { 'warn' }, diagnostics_color = { warn = { bg = p.orange, fg = p.white } }, separator = { right = '' }, },
+			{ 'diagnostics', source = { 'nvim_lsp' }, sections = { 'warn' }, diagnostics_color = { warn = { bg = p.orange, fg = p.white } }, separator = { right = '' }, },
 		},
 		lualine_c = {
 			{ 'filename', file_status = false, separator = { right = '' } },
