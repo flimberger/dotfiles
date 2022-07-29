@@ -14,6 +14,8 @@ EDITOR=nvim
 command -v nvim >/dev/null || EDITOR=vi
 export EDITOR
 
+export HOST="$(hostname -s)"
+
 # Set up local $PATH
 if [ -d "$HOME/.local/bin" ]
 then	PATH="$HOME/.local/bin:$PATH"

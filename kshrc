@@ -5,7 +5,6 @@
 ##
 ## Set the `traditional` prompt
 ##
-HOST="$(hostname -s)"
 PS1="$USER@$HOST"
 
 case $(id -u) in
@@ -13,7 +12,7 @@ case $(id -u) in
 *)	PS1="${PS1}$ " ;;
 esac
 
-export HOST PS1
+export PS1
 
 test -f "$HOME/lib/cfg/aliases" && . "$HOME/lib/cfg/aliases"
 test -f "$HOME/lib/cfg/ksh_completions" && . "$HOME/lib/cfg/ksh_completions"
