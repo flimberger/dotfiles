@@ -50,11 +50,9 @@ fi
 unset profile
 
 # Include machine-specific configuration
-sysname=$(hostname -s)
-if [ -f "$HOME/lib/cfg/profile.$sysname" ]; then
-	. "$HOME/lib/cfg/profile.$sysname"
+if [ -f "$HOME/lib/cfg/profile.$HOST" ]; then
+	. "$HOME/lib/cfg/profile.$HOST"
 fi
-unset sysname
 
 # Modifications are done, so now the variables can be exported
 export PATH
