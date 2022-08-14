@@ -21,11 +21,13 @@ autogroup 0 stats
 autogroup 0 xclock
 
 command 9term		9t
+command acme		acme
 command audacious	audacious
 command audacity	audacity
+command crt		cool-retro-term
 command endless-sky	endless-sky
 command firefox		firefox
-command fsam		"sam -t fsamterm"
+command fsam		fsam
 command fterm		"fterm -l /usr/local/plan9/bin/9 rc -l"
 command ghidra		ghidra
 command gimp		gimp
@@ -36,11 +38,11 @@ command qpdfview	qpdfview
 command sam		9sam
 command sublimetext	sublime
 command supertuxkart	supertuxkart
-command tcsh		"xterm -e tcsh -l"
 command telegram 	telegram-desktop
-command term		alacritty
+command term		xterm
 command thunderbird	thunderbird
 command tmux		"alacritty tmux_session"
 command transmission	transmission-gtk
 command tuxguitar	tuxguitar
 command vlc		vlc
+command vscode		code-oss
