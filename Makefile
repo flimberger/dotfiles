@@ -23,10 +23,12 @@ ${HOME}/.hgrc: hgrc
 
 ${HOME}/.kshrc: kshrc
 	ln -s ${PWD}/kshrc $@
-
+$(HOME)/.login:	login
+	ln -s $(PWD)/login $@
 ${HOME}/.profile: profile
 	ln -s ${PWD}/profile $@
-
+$(HOME)/.tcshrc:	tcshrc
+	ln -s $(PWD)/tcshrc $@
 ${HOME}/.tmux.conf: tmux.conf
 	ln -s ${PWD}/tmux.conf $@
 
@@ -46,7 +48,9 @@ install:	\
 	${HOME}/.gitconfig	\
 	${HOME}/.hgrc		\
 	${HOME}/.kshrc		\
+	$(HOME)/.login		\
 	${HOME}/.profile	\
+	$(HOME)/.tcshrc		\
 	${HOME}/.tmux.conf	\
 	${HOME}/.Xresources
 	${MAKE} install-$$(uname)
