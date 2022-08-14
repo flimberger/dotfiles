@@ -1,6 +1,6 @@
 borderwidth 4
 
-fontname "Bitter"
+fontname "Spleen 32x64:pixelsize=18"
 
 color activeborder	"#FFCC00"
 color inactiveborder	"#AAAAAA"

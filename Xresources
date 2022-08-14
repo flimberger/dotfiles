@@ -1,14 +1,13 @@
 #define CUR	dark orange
 !#define NBG	#355ACE
 #define NBG	#123456
-#define NFG	#AAAAAA
+#define NFG	#CCCCCC
 
 ! xterm
 XTerm.termName:		xterm-256color
 XTerm.*.background:	NBG
 XTerm.*.cursorColor:	CUR
-XTerm.*.faceName:	Fira Mono Medium:pixelsize=13:antialias=true:autohint=true
-!XTerm.*.faceName:	MxPlus ToshibaSat 9x16:pixelsize=16:antialias=true:autohint=true
+XTerm.*.faceName:	Spleen 32x64 Medium:pixelsize=16:antialias=true:autohint=true
 XTerm.*.foreground:	NFG
 XTerm.*.internalBorder:	5
 XTerm.*.utf8:		true
