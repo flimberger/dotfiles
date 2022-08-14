@@ -1,13 +1,20 @@
 #define CUR	dark orange
-!#define NBG	#355ACE
 #define NBG	#123456
 #define NFG	#CCCCCC
+
+! xft
+Xft.autohint:	0
+Xft.lcdfilter:	lcddefault
+Xft.hintstyle:	hintslight
+Xft.hinting:	0
+Xft.antialias:	1
+Xft.rgba:	rgb
 
 ! xterm
 XTerm.termName:		xterm-256color
 XTerm.*.background:	NBG
 XTerm.*.cursorColor:	CUR
-XTerm.*.faceName:	Spleen 32x64 Medium:pixelsize=16:antialias=true:autohint=true
+XTerm.*.faceName:	Spleen 32x64 Medium:pixelsize=16
 XTerm.*.foreground:	NFG
 XTerm.*.internalBorder:	5
 XTerm.*.utf8:		true
