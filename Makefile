@@ -8,6 +8,9 @@ ${HOME}/.bashrc: bashrc
 	ln -s ${PWD}/bashrc $@
 $(HOME)/.config/alacritty:
 	ln -s $(PWD)/alacritty $@
+$(HOME)/.config/fontconfig/fonts.conf: fonts.conf
+	mkdir -p $(HOME)/.config/fontconfig
+	ln -s $(PWD)/fonts.conf $@
 $(HOME)/.config/nvim:
 	ln -s $(PWD)/nvim $@
 $(HOME)/.config/user-dirs.dirs:	user-dirs.dirs
@@ -37,6 +40,7 @@ install:	\
 	${HOME}/.aliases	\
 	${HOME}/.bashrc		\
 	${HOME}/.config/alacritty	\
+	$(HOME)/.config/fontconfig/fonts.conf	\
 	$(HOME)/.config/nvim	\
 	$(HOME)/.config/user-dirs.dirs \
 	${HOME}/.gitconfig	\
