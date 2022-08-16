@@ -2,6 +2,7 @@
 
 startcwm(){
 	xrdb -merge lib/cfg/Xresources
+	test -f lib/cfg/$HOST.xresources && xrdb -merge lib/cfg/$HOST.xresources
 
 	wp=pic/wp/simonstalenhag/wevegotbandwidth.jpg
 	if [ -f "$wp" ]
