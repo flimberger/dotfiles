@@ -4,15 +4,9 @@ window:
     lines: 45
 font:
   normal:
-    family: IBM Plex Mono
-    style: Semibold
-  bold:
-    family: IBM Plex Mono
+    family: Inconsolata LGC
     style: Bold
-  italic:
-    family: IBM Plex Mono
-    style: Italic
-  size: 9
+  size: 10
 colors:
   primary:
     background: '0x123456'
