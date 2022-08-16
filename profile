@@ -50,8 +50,8 @@ fi
 
 export PLAN9=/usr/local/plan9
 case $(uname) in
-FreeBSD)	NPROC=$(sysctl -n hw.ncpu) ;;
-Linux)		NPROC=$(nproc) ;;
+FreeBSD)	export NPROC=$(sysctl -n hw.ncpu) ;;
+Linux)		export NPROC=$(nproc) ;;
 esac
 PATH="$PATH:$PLAN9/bin"
 
@@ -63,7 +63,7 @@ Stormbird)
 	export ANDROID_SDK_ROOT="$HOME/lib/android/sdk"
 	# This variable is deprecated, but still used by gradle.
 	export ANDROID_HOME="$ANDROID_SDK_ROOT"
-	PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/$(ls "$ANDROID_SDK_ROOT/build-tools | sort -n | tail -1)"
+	PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/$(ls "$ANDROID_SDK_ROOT/build-tools" | sort -n | tail -1)"
 	export ANDROID_STUDIO_HOME="$HOME/lib/apps/android-studio"
 
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
