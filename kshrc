@@ -1,18 +1,4 @@
-##
-## ksh startup script
-##
-
-##
-## Set the `traditional` prompt
-##
-PS1="$USER@$HOST"
-
-case $(id -u) in
-0)	PS1="${PS1}# " ;;
-*)	PS1="${PS1}$ " ;;
-esac
-
-export PS1
+export PS1='\u@\h\$ '
 
 test -f "$HOME/lib/cfg/aliases" && . "$HOME/lib/cfg/aliases"
 test -f "$HOME/lib/cfg/ksh_completions" && . "$HOME/lib/cfg/ksh_completions"
