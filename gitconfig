@@ -18,10 +18,12 @@
 	cb = rev-parse --abbrev-ref HEAD
 	ci = commit
 	co = checkout
-	f = fetch --all --prune
+	f = fetch
+	fa = fetch --all
 	fp = push --force-with-lease
 	g = grep -n
 	pa = add --patch
+	pr = fetch --prune
 	root = rev-parse --show-toplevel
 	rs = reset HEAD --
 	rsa = reset --hard HEAD
