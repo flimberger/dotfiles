@@ -7,7 +7,6 @@ alias ll='ls -Al --color=never'
 alias ag='ag --nogroup --nocolor'
 
 # utilities
-alias usbtty='picocom -b 115200 /dev/ttyUSB0'
 alias breakspaces="tr '[:blank:]' '\n'"
 alias igrep='grep -i'
 alias dgrep='grep -nr'
