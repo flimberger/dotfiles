@@ -50,3 +50,6 @@ command tuxguitar	tuxguitar
 command vlc		vlc
 command vscode		code-oss
 command xv		xv
+
+bind-key CM-c	window-htile
+bind-key CM-v	window-vtile
