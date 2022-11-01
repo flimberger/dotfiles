@@ -34,6 +34,7 @@ command fterm		"fterm -l /usr/local/plan9/bin/9 rc -l"
 command ghidra		ghidra
 command gimp		gimp
 command inkscape	inkscape
+command imhex		imhex
 command keepass 	keepassxc
 command openttd		openttd
 command qpdfview	qpdfview
@@ -48,3 +49,4 @@ command transmission	transmission-gtk
 command tuxguitar	tuxguitar
 command vlc		vlc
 command vscode		code-oss
+command xv		xv
