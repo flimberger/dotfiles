@@ -17,8 +17,10 @@ color menufg	"#FFCC00"
 # Inspired by https://www.tumfatig.net/20200923/a-simple-shell-status-bar-for-cwm/
 ignore stats
 ignore xclock
+ignore stalonetray
 autogroup 0 stats
 autogroup 0 xclock
+autogroup 0 stalonetray
 
 command 9term		9t
 command acme		acme

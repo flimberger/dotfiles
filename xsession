@@ -12,6 +12,7 @@ startcwm(){
 
 	9 stats -lmbW 80x72@0,0 &
 	xclock -render -geometry 80x80+0+72 &
+	stalonetray -c lib/cfg/stalonetrayrc &
 
 	# composite effects, improves firefox experience
 	compton --backend=glx \
