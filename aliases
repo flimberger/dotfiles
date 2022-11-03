@@ -1,6 +1,5 @@
 # listing
-alias ls='ls -1A --color=never'
-alias lc='ls -ACF --color=never'
+alias ls='ls -AF --color=never'
 alias ll='ls -Al --color=never'
 
 # fix formatting
