@@ -41,7 +41,8 @@ require('lualine').setup {
 	options = {
 		theme = 'auto',
 		icons_enabled = false,
-		--global_status = true,
+		-- this seems not be working, use vim.opt.laststatus = 3 after requiring the statusline setup
+		-- globalstatus = true,
 		component_separators = { left = '', right = '╱' },
 		section_separators = { left = '', right = '' },
 	},
@@ -60,3 +61,4 @@ require('lualine').setup {
 		},
 	},
 }
+vim.opt.laststatus = 3
