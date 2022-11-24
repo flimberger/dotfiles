@@ -26,6 +26,17 @@ local function make_gap(c)
 	return { gap, color = { fg = c, bg = c }, separator = { right = '' } }
 end
 
+local function formatbranch(b)
+	s, e = string.find(b, '/', 1, true)
+	if s ~= nil then
+		b = string.sub(b, e+1)
+	end
+	if #b > 12 then
+		b = string.sub(b, 1, 12)
+	end
+	return b
+end
+
 require('lualine').setup {
 	options = {
 		theme = 'auto',
@@ -36,7 +47,7 @@ require('lualine').setup {
 	},
 	sections = {
 		lualine_b = {
-			'branch',
+			{ 'branch', fmt = formatbranch },
 			'diff',
 			make_gap(p.darkblue),
 			{ 'diagnostics', source = { 'nvim_lsp' }, sections = { 'error' }, diagnostics_color = { error = { bg = p.red, fg = p.white } }, separator = { right = '' }, },
